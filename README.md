@@ -20,18 +20,18 @@ Fixed-length codes work particularly well in hardware, where the predictable and
 of data can help make processing this data quick and efficient. Let’s take a quick look at an few
 quick examples:
 
-Given the string “Egg cab” we would encode this as follows:
+Given the string “Egg cab” it would encode this as follows:
 
 <img src = "https://github.com/juunjii/HuffmanCodeTree/assets/83564748/205194b5-aa03-46f4-aca9-5e0bb6856003">
 
 So the encoded string would be 01000101011001110110011100100000011000110110000101100010
 
-Going in the reverse direction we could decode
+Going in the reverse direction it could decode
 010010000110010101100001011001000010000001100111011000010110011001100110 as follows:
 
 ![table3](https://github.com/juunjii/HuffmanCodeTree/assets/83564748/56ef2e08-6f0d-4f31-a324-1f0fdce93180)
 
-So decoded we would get “Head gaff”.
+So decoded it would get “Head gaff”.
 
 
 ### 2. Variable Length Encoding 
@@ -60,28 +60,29 @@ cover all of the letters used in whatever text you wish to compress.
 It’s common to present Huffman codes in two ways. First as a “look up table” where you
 can quickly go from a letter to the binary pattern that encodes it, and secondly as a tree. The
 codebook/look up table makes it easy to encode text following the same process as fixed length
-codes For example to encode the name “kate” we would simply look up each letter in the codebook:
+codes For example to encode the name “kate” you would simply look up each letter in the codebook:
 
 ![table5](https://github.com/juunjii/HuffmanCodeTree/assets/83564748/deb00927-637f-4f3f-9871-2127279fb20d)
 
-Decoding with only the lookup table is possible but not efficient. With fixed length codes we
+Decoding with only the lookup table is possible but not efficient. With fixed length codes you
 could easily split a long sequence up by length and look up the letter for each 8-bit sub-sequence.
 With non-fixed huffman codes like this, this isn’t possible, so an alternate process would be needed.
 This is where the tree perspective comes in handy. Decoding text simply becomes the process of
-letting the binary string guide us as we walk through the tree.
-For example given the series “001111001111011000111” we can take each bit one at a time
+letting the binary string guide us as you walk through the tree.
+For example given the series “001111001111011000111” you can take each bit one at a time
 following the edges from the root of the tree based on the next bit. Starting from the root, the
-first two bits “00” bring us to the first letter ‘e‘. We then restart from the root. The next three
-bits 111, bring us to ‘a’. We restart again, and 10 brings us to ‘t’. Following this process bit-by-bit
+first two bits “00” bring us to the first letter ‘e‘. You then restart from the root. The next three
+bits 111, bring us to ‘a’. You restart again, and 10 brings us to ‘t’. Following this process bit-by-bit
 eventually retrieve the full message: “eat a tea”.
 
-From this example we can see the most important property: Huffman codes are “prefix free”.
-This means that no one code can be the prefix-of (same as the beginning of) a second code. If we
-had “a” encoded as 01, and “b” encoded as “0100”, and “c” and “00”, for example, we would not
+From this example, you can see the most important property: Huffman codes are “prefix free”.
+This means that no one code can be the prefix-of (same as the beginning of) a second code. If you
+had “a” encoded as 01, and “b” encoded as “0100”, and “c” and “00”, for example, you would not
 be prefix free, and wouldn’t know what “010001” encodes – is it “aca” or “ba”?
-Translated structurally, we see that this means that we should only have two types of nodes
+
+Translated structurally, you see that this means that you should only have two types of nodes
 in our code tree – leaves (store a letter but no next nodes) and internal nodes (have both a zero
-and one for the next node, but no data) So long as our code tree has this property, we can rely on
+and one for the next node, but no data) So long as our code tree has this property, you can rely on
 decoding to be quick and efficient.
 
 
