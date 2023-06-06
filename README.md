@@ -14,7 +14,7 @@ are known as “fixed-length” encoding. This means that each letter correspond
 letter. A selection of standard fix-length codes under the ASCII coding scheme can be seen in the
 table below:
 
-<img src = "https://github.com/juunjii/HuffmanCodeTree/assets/83564748/93755857-4681-4f6e-9ca1-921238415814" width= "300"  height = "300">
+<img src = "https://github.com/juunjii/HuffmanCodeTree/assets/83564748/93755857-4681-4f6e-9ca1-921238415814">
 
 Fixed-length codes work particularly well in hardware, where the predictable and regular length
 of data can help make processing this data quick and efficient. Let’s take a quick look at an few
@@ -22,7 +22,7 @@ quick examples:
 
 Given the string “Egg cab” we would encode this as follows:
 
-<img src = "https://github.com/juunjii/HuffmanCodeTree/assets/83564748/205194b5-aa03-46f4-aca9-5e0bb6856003" width= "300"  height = "300">
+<img src = "https://github.com/juunjii/HuffmanCodeTree/assets/83564748/205194b5-aa03-46f4-aca9-5e0bb6856003">
 
 
 
