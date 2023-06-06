@@ -24,5 +24,12 @@ Given the string “Egg cab” we would encode this as follows:
 
 <img src = "https://github.com/juunjii/HuffmanCodeTree/assets/83564748/205194b5-aa03-46f4-aca9-5e0bb6856003">
 
+So the encoded string would be 01000101011001110110011100100000011000110110000101100010
 
+Going in the reverse direction we could decode
+010010000110010101100001011001000010000001100111011000010110011001100110 as follows:
+
+![table3](https://github.com/juunjii/HuffmanCodeTree/assets/83564748/56ef2e08-6f0d-4f31-a324-1f0fdce93180)
+
+So decoded we would get “Head gaff”
 
