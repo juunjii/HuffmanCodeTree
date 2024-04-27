@@ -64,9 +64,6 @@ codes For example to encode the name “kate” you would simply look up each le
 
 ![table5](https://github.com/juunjii/HuffmanCodeTree/assets/83564748/deb00927-637f-4f3f-9871-2127279fb20d)
 
-![image](https://github.com/juunjii/HuffmanCodeTree/assets/83564748/e6b21d05-9ee8-4501-9fa9-83add9b99c00)
-
-
 Decoding with only the lookup table is possible but not efficient. With fixed length codes you
 could easily split a long sequence up by length and look up the letter for each 8-bit sub-sequence.
 With non-fixed huffman codes like this, this isn’t possible, so an alternate process would be needed.
